@@ -1,0 +1,181 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.navigation .button {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation .button:hover {
+    background-color: #0056b3;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    display: none;
+    border-radius: 10px;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* 使按钮链接没有下划线 */
+    text-align: center; /* 使按钮链接居中 */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #0056b3;
+}
+
+.gallery-item {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 15px;
+}
+
+.gallery-item h3 {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+.gallery-item video {
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+    .button {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 0 5px;
+    }
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+    .gallery-item h3 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+    .gallery {
+        padding: 10px;
+    }
+    .button {
+        padding: 6px 12px;
+        font-size: 12px;
+        margin: 0 3px;
+    }
+    .indicator {
+        width: 8px;
+        height: 8px;
+    }
+    .gallery-item {
+        padding: 10px;
+    }
+    .gallery-item h3 {
+        font-size: 16px;
+    }
+}
